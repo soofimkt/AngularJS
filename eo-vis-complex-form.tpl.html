@@ -1,0 +1,41 @@
+<div class="modal fade" data-backdrop="static">
+    <div class="eo-vis-complex-form-dialog modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" ng-click="closeComplexFormDialog(false)" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" ng-bind="eoVisComplexForm.title"></h4>
+            </div>
+            <div class="modal-body">
+                <eo-vis-complex-form><div class="complexFormDiv"></div></eo-vis-complex-form>
+
+                <div class="row" ng-repeat="complexProperty in eoVisComplexForm.complexProperties">
+                    {{complexProperty.name()}}
+                </div>
+               <!-- div class="row">&lt;!&ndash;ng-repeat="complexProperties in {{complexPropertiesData}}&ndash;&gt;
+                    <div ng-if="!isRichTextEditor('boolean')" class="col-sm-4">boolean</div>
+                    <div class="col-sm-8" ></div>
+                </div>-->
+                <!--<div class="row">&lt;!&ndash;ng-repeat="complexProperties in {{complexPropertiesData}}"&ndash;&gt;
+                    <div ng-if="!isRichTextEditor('boolean')" class="col-sm-4">boolean</div>
+                    <div class="col-sm-8" >{{getTemplate('number')}}</div>
+                </div>-->
+                <!--<div class="row">&lt;!&ndash;ng-repeat="complexProperties in {{complexPropertiesData}}"&ndash;&gt;
+                    <div ng-if="!isRichTextEditor('text')" class="col-sm-4">text</div>
+                    <div class="col-sm-8"></div>
+                </div>
+                <div class="row">&lt;!&ndash;ng-repeat="complexProperties in {{complexPropertiesData}}"&ndash;&gt;
+                    <div ng-if="!isRichTextEditor('number')" class="col-sm-4">number</div>
+                    <div class="col-sm-8">{{getTemplate('number')}}</div>
+                </div>
+                <div class="row">&lt;!&ndash;ng-repeat="complexProperties in {{complexPropertiesData}}"&ndash;&gt;
+                    <div ng-if="!isRichTextEditor('date')" class="col-sm-4">date</div>
+                    <div class="col-sm-8">{{getTemplate('date')}}</div>
+                </div>-->
+            </div>
+            <div class='modal-footer'>
+                <input type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeComplexFormDialog(false)" value="cancel" />
+                <input type="submit" ng-click="save()" data-dismiss="modal" class="btn btn-primary" value="save" />
+            </div>
+        </div>
+    </div>
+</div>
